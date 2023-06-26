@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/public/styles/output.css">
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <title>single Product</title>
+</head>
+
+<body class="bg-gray-100 font-shabnam ">
+   <!-- app-bar in mobile -->
+   <div class="md:hidden p-4 pt-8 ">
+      <div class="flex justify-between items-center">
+         <div class="w-7 h-7 flex justify-center items-center bg-white shadow-md rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+               stroke="currentColor" class="w-5 h-5">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+         </div>
+         <div class="text-sm text-slate-800 font-shabnamBold">گوشی آیفون <span class="font-iransans">13</span> -
+            <span class="font-iransans">128</span> گیگابایت
+         </div>
+         <div class="w-7 h-7 flex justify-center items-center bg-white shadow-md rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+               <path fill-rule="evenodd"
+                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                  clip-rule="evenodd" />
+            </svg>
+         </div>
+      </div>
+   </div>
+   <!-- navbar in Desktop -->
+   <nav class="hidden md:block sticky top-0 z-10 bg-stone-50 shadow-sm">
+      <div class=" container max-w-screen-lg">
+         <div class="flex items-center justify-between px-5 xl:px-0 py-2 mb-5">
+            <!-- Links -->
+            <ul class="w-1/2 xl:w-[70%] flex items-center font-shabnamBold">
+               <li class="ml-2  xl:ml-6 2xl:ml-7 ">
+                  <!-- icon in tablet -->
+                  <a href="#!" class="block p-1 lg:hidden md:text-base cursor-pointer ">
+                     <span class="text-orange-600 font-black">دیجی</span> <span
+                        class="text-slate-800 font-black">تایز</span>
+                  </a>
+                  <!-- icon in desktop -->
+                  <a href="#!" class="md:hidden lg:block  p-1 cursor-pointer">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="99" height="26" fill="none">
+                        <path fill="#222F5D"
+                           d="M8.744 1.41V5.42H4.732V1.41h4.012Zm1.941 11.569c.173 0 .259.086.259.259v4.503c0 .173-.086.259-.259.259H9.65c-.276 0-.475-.009-.595-.026-.087 1.208-.337 2.235-.751 3.08-.414.863-1.078 1.657-1.993 2.381-.897.725-2.157 1.484-3.779 2.278L.746 21.727c1.208-.725 2.054-1.311 2.537-1.76.483-.449.776-.889.88-1.32.12-.431.181-1.13.181-2.096V7.49h4.762v4.918c0 .173.044.311.13.414a.56.56 0 0 0 .414.156h1.035Zm8.672-.233a5.21 5.21 0 0 1-.699 2.64A5.43 5.43 0 0 1 16.77 17.3a5.12 5.12 0 0 1-2.64.699h-3.442c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h3.39a.497.497 0 0 0 .363-.155.527.527 0 0 0 .155-.388V6.767h4.762v5.979Zm.052 7.325v4.011h-8.024v-4.011h8.024ZM26.094 18a5.119 5.119 0 0 1-2.64-.699 5.43 5.43 0 0 1-1.89-1.915 5.21 5.21 0 0 1-.698-2.64V.322h4.762v12.113c0 .173.043.31.13.414.103.087.232.13.388.13h1.578c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-1.63ZM35.798.685v4.011h-8.024V.685h8.024Zm-4.763 6.082h4.763v5.979a5.21 5.21 0 0 1-.7 2.64A5.43 5.43 0 0 1 33.21 17.3a5.119 5.119 0 0 1-2.64.699h-2.846c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h2.795a.496.496 0 0 0 .362-.155.527.527 0 0 0 .155-.388V6.767Z" />
+                        <path fill="#FF755C"
+                           d="M56.737 12.979c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-.724c.034.31.051.544.051.699a5.567 5.567 0 0 1-.776 2.873 5.615 5.615 0 0 1-2.096 2.07 5.614 5.614 0 0 1-2.9.777h-6.108a6.878 6.878 0 0 1-3.545-.958 7.159 7.159 0 0 1-2.589-2.588 6.878 6.878 0 0 1-.957-3.546v-6.833h4.762v6.574c0 .639.224 1.182.673 1.63.466.467 1.018.7 1.656.7h6.186c.207 0 .38-.07.518-.207a.672.672 0 0 0 .207-.492.672.672 0 0 0-.207-.492.702.702 0 0 0-.518-.207h-5.668v-5.021h12.035ZM56.74 18c-.173 0-.259-.086-.259-.259v-4.503c0-.173.086-.26.259-.26h5.798c1.173 0 2.174-.361 3.002-1.086l2.045-1.812-2.977-1.45c-.241-.103-.431-.155-.57-.155-.31 0-.62.138-.93.414l-2.693 2.977-3.313-2.899 2.718-3.313c.552-.656 1.2-1.13 1.941-1.423a5.725 5.725 0 0 1 2.226-.466c.863 0 1.682.207 2.459.62l5.539 2.59a.597.597 0 0 0 .207.05h3.339v4.66h-3.313v.724c0 .173.043.311.13.414a.56.56 0 0 0 .413.156h3.236c.172 0 .258.086.258.259v4.503c0 .173-.086.259-.258.259H72.76c-1.018 0-1.855-.242-2.51-.725-.639-.5-1.165-1.225-1.58-2.174l-.517.518a9.264 9.264 0 0 1-2.925 1.786A9.664 9.664 0 0 1 61.89 18h-5.151Zm3.21 2.07h4.011v4.012h-4.012v-4.011Zm24.72-7.324a5.21 5.21 0 0 1-.698 2.64 5.43 5.43 0 0 1-1.89 1.915 5.12 5.12 0 0 1-2.64.699H76c-.172 0-.259-.086-.259-.259v-4.503c0-.173.087-.26.26-.26h3.39a.496.496 0 0 0 .362-.155.526.526 0 0 0 .155-.388V6.767h4.763v5.979Zm.053 7.325v4.011h-8.024v-4.011h8.024Zm8.315-7.092c.449 0 .673-.181.673-.544a.418.418 0 0 0-.155-.336c-.104-.104-.346-.285-.725-.544l-5.824-4.011 2.718-3.935 6.6 4.582c.707.552 1.242 1.138 1.605 1.76.362.62.543 1.397.543 2.329 0 1.087-.267 2.07-.802 2.95a5.62 5.62 0 0 1-2.122 2.045 6.073 6.073 0 0 1-2.925.725h-6.445v-5.021h6.859Z" />
+                     </svg>
+                  </a>
+               </li>
+               <li class="ml-1 lg:ml-2 xl:ml-6 2xl:ml-7">
+                  <a href="#!" class="p-2 block text-slate-500 md:text-xs cursor-pointer ">خانه</a>
+               </li>
+               <li class="ml-1 lg:ml-2 xl:ml-6 2xl:ml-7">
+                  <a href="#!" class="p-2 block text-slate-500 md:text-xs cursor-pointer">تلفن
+                     همراه</a>
+               </li>
+               <li class="ml-1 lg:ml-2 xl:ml-6 2xl:ml-7">
+                  <a href="#!" class="p-2 block text-slate-500 md:text-xs cursor-pointer">لپ
+                     تاپ</a>
+               </li>
+               <li class="ml-1 lg:ml-2 xl:ml-6 2xl:ml-7">
+                  <a href="#!" class="p-2 block text-slate-500 md:text-xs cursor-pointer">ساعت
+                     هوشمند</a>
+               </li>
+            </ul>
+            <!-- search bar -->
+            <div class=" w-1/2  max-w-lg flex items-center bg-gray-200 rounded  py-1">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  class="w-6 h-6 mx-2 fill-slate-500">
+                  <path fill-rule="evenodd"
+                     d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                     clip-rule="evenodd" />
+               </svg>
+               <input type="text" class=" w-full py-1  rounded  border-0 outline-0 focus:outline-none bg-transparent text-gray-600  
+             placeholder-gray-400   font-shabnamLight text-xs  lg:text-sm"
+                  placeholder="جستجوی  نام محصول، نام برند، نام مدل،...">
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- brudcrumb in mobile -->
+   <div class="flex md:hidden items-center p-4 text-xs select-none">
+      <div class="flex items-center">
+         <span class="text-orange-400 mx-1.5">تلفن همراه</span>
+         <span class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
+               <path stroke="#222F5D"
+                  d="m.945 4.2.006-.006.006-.007c.369-.406 1.067-.973 1.831-1.502.763-.53 1.537-.984 2.042-1.187l.01-.004c.067-.029.2-.079.341-.123a1.72 1.72 0 0 1 .3-.071c.13.002.253.031.375.092a.812.812 0 0 1 .33.377c.02.056.057.198.093.363a11.189 11.189 0 0 1 .054.253l.006.034c.1.558.161 1.502.161 2.575 0 1-.057 1.899-.14 2.48a1.34 1.34 0 0 0-.007.034l-.018.087v.002c-.013.07-.031.159-.052.254a4.92 4.92 0 0 1-.099.382.671.671 0 0 1-.012.033l-.004.01a.75.75 0 0 1-.66.424H5.48a.983.983 0 0 1-.155-.031 3.398 3.398 0 0 1-.36-.12l-.226-.095c-.482-.206-1.233-.646-1.978-1.16-.746-.516-1.436-1.07-1.814-1.491L.94 5.794l-.008-.008-.001-.001-.007-.007L.9 5.752a5.486 5.486 0 0 1-.084-.09 2.22 2.22 0 0 1-.164-.195l-.006-.008L.64 5.45a.749.749 0 0 1-.14-.446c0-.185.053-.348.144-.478l.074-.081.039-.044c.058-.065.125-.138.188-.202Z" />
+            </svg>
+         </span>
+      </div>
+      <div class="flex items-center">
+         <span class="text-orange-400 mx-1.5"> برند آیفون</span>
+         <span class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
+               <path stroke="#222F5D"
+                  d="m.945 4.2.006-.006.006-.007c.369-.406 1.067-.973 1.831-1.502.763-.53 1.537-.984 2.042-1.187l.01-.004c.067-.029.2-.079.341-.123a1.72 1.72 0 0 1 .3-.071c.13.002.253.031.375.092a.812.812 0 0 1 .33.377c.02.056.057.198.093.363a11.189 11.189 0 0 1 .054.253l.006.034c.1.558.161 1.502.161 2.575 0 1-.057 1.899-.14 2.48a1.34 1.34 0 0 0-.007.034l-.018.087v.002c-.013.07-.031.159-.052.254a4.92 4.92 0 0 1-.099.382.671.671 0 0 1-.012.033l-.004.01a.75.75 0 0 1-.66.424H5.48a.983.983 0 0 1-.155-.031 3.398 3.398 0 0 1-.36-.12l-.226-.095c-.482-.206-1.233-.646-1.978-1.16-.746-.516-1.436-1.07-1.814-1.491L.94 5.794l-.008-.008-.001-.001-.007-.007L.9 5.752a5.486 5.486 0 0 1-.084-.09 2.22 2.22 0 0 1-.164-.195l-.006-.008L.64 5.45a.749.749 0 0 1-.14-.446c0-.185.053-.348.144-.478l.074-.081.039-.044c.058-.065.125-.138.188-.202Z" />
+            </svg>
+         </span>
+      </div>
+      <div class="flex items-center">
+         <span class="text-slate-700 mx-1">آیفون <span class="font-iransans">13</span> </span>
+      </div>
+   </div>
+   <!-- *contents  -->
+   <div class="container max-w-screen-lg ">
+      <!-- main content -->
+      <div class="px-4 xl:px-0  select-none">
+         <div class="grid grid-cols-12 auto-rows-auto md:grid-cols-[180px_repeat(11,minmax(0px,_1fr))] 
+            md:grid-rows-[56px_minmax(500px,_1fr)] md:gap-x-3 md:gap-y-2 lg:gap-y-4 xl:gap-y-5">
+            <!-- -----sidebar in desktop------->
+            <div class="hidden md:block col-span-1  row-span-2">
+               <div class="sticky top-16">
+                  <!-- categoty in desktop -->
+                  <div class="bg-white rounded-xl p-4 ">
+                     <h1 class="md:text-xs lg:text-sm text-orange-400 font-shabnamBold  mb-2 px-1">
+                        دسته بندی
+                     </h1>
+                     <ul x-data="{activeTab:'tab1', activeClass:'text-slate-800'}">
+                        <li @click="activeTab = 'tab1'" class="relative  cursor-pointer ">
+                           <a href="#!" class=" flex items-center text-slate-400 py-2 "
+                              :class="activeTab === 'tab1' ? activeClass : '' ">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-6 ml-2" fill="none">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.125"
+                                    d="M13.5 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5c0-3 .75-3.75 3.75-3.75h4.5c3 0 3.75.75 3.75 3.75ZM9 3.625H6" />
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.125"
+                                    d="M7.5 13.825a1.163 1.163 0 1 0 0-2.325 1.163 1.163 0 0 0 0 2.325Z" />
+                              </svg>
+                              <span
+                                 class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute top-0 -right-1"></span>
+                              <span class="md:text-xs lg:text-13px   select-none">
+                                 تلفن همراه
+                              </span>
+                           </a>
+                        </li>
+
+                        <li @click="activeTab = 'tab2'" class="relative  cursor-pointer ">
+                           <a href="#!" class=" flex items-center text-slate-400 py-2"
+                              :class="activeTab === 'tab2' ? activeClass : '' ">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" class="ml-2" fill="none">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.793 1.333H12.2c2.373 0 2.967.593 2.967 2.96v4.22c0 2.373-.594 2.96-2.96 2.96H4.793c-2.366.007-2.96-.587-2.96-2.953V4.293c0-2.367.594-2.96 2.96-2.96ZM8.5 11.48v3.187M1.833 8.667h13.334M5.5 14.667h6" />
+                              </svg>
+                              <span
+                                 class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute top-0 -right-1">
+                              </span>
+
+                              <span class="md:text-xs lg:text-13px  cursor-pointer select-none"> لپ تاپ</span>
+                           </a>
+                        </li>
+
+                        <li @click="activeTab = 'tab3'" class="relative cursor-pointer">
+                           <a href="#!" class=" flex items-center text-slate-400 py-2"
+                              :class="activeTab === 'tab3' ? activeClass : '' ">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-miterlimit="10"
+                                    d="M6.166 12.667h4.667c1.553 0 2.333-.78 2.333-2.333V5.667c0-1.553-.78-2.333-2.333-2.333H6.166c-1.553 0-2.333.78-2.333 2.333v4.667c0 1.553.78 2.333 2.333 2.333ZM11.166 1.334H5.833M11.166 14.666H5.833" />
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-miterlimit="10" d="M8.167 6.334v2h2" />
+                              </svg>
+                              <span
+                                 class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute top-0 -right-1"></span>
+                              <span class=" md:text-xs lg:text-13px  cursor-pointer select-none">
+                                 ساعت هوشمند
+                              </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- ad -->
+                  <div class="hidden md:block md:my-6 md:rounded-lg md:overflow-hidden bg-white p-5 ">
+                     <img src="/assets/imgs/Single Product/watch (1).png" alt="" class="mx-auto">
+                  </div>
+                  <!-- quick access -->
+                  <div class="bg-white rounded-xl  p-4 ">
+                     <h1 class="md:text-xs lg:text-sm text-orange-400 font-shabnamBold  mb-2 px-1">
+                        دسترسی سریع
+                     </h1>
+                     <ul x-data="{activeTab:'', activeClass:'text-slate-800'}">
+                        <li @click="activeTab = 'tab1'" class="relative  cursor-pointer ">
+                           <a href="#1" class=" flex items-center text-slate-400 py-2 transition-all duration-500"
+                              :class="activeTab === 'tab1' ? activeClass : '' ">
+                              <span class="md:text-xs lg:text-13px   select-none">
+                                 طراحی
+                              </span>
+                           </a>
+                        </li>
+                        <li @click="activeTab = 'tab2'" class="relative  cursor-pointer ">
+                           <a href="#2" class=" flex items-center text-slate-400 py-2 "
+                              :class="activeTab === 'tab2' ? activeClass : '' ">
+                              <span class="md:text-xs lg:text-13px   select-none">
+                                 دوربین
+                              </span>
+                           </a>
+                        </li>
+                        <li @click="activeTab = 'tab3'" class="relative  cursor-pointer ">
+                           <a href="#3" class=" flex items-center text-slate-400 py-2 "
+                              :class="activeTab === 'tab3' ? activeClass : '' ">
+                              <span class="md:text-xs lg:text-13px   select-none">
+                                 باتری
+                              </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- brudcrumb in desktop  -->
+            <div class="hidden md:grid md:col-span-11 select-none">
+               <div class="flex items-center  bg-white rounded-md md:h-9 lg:h-11 px-2  text-xs lg:text-13px">
+                  <div class="flex items-center">
+                     <span class="text-orange-400 mx-1.5">تلفن همراه</span>
+                     <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
+                           <path stroke="#222F5D"
+                              d="m.945 4.2.006-.006.006-.007c.369-.406 1.067-.973 1.831-1.502.763-.53 1.537-.984 2.042-1.187l.01-.004c.067-.029.2-.079.341-.123a1.72 1.72 0 0 1 .3-.071c.13.002.253.031.375.092a.812.812 0 0 1 .33.377c.02.056.057.198.093.363a11.189 11.189 0 0 1 .054.253l.006.034c.1.558.161 1.502.161 2.575 0 1-.057 1.899-.14 2.48a1.34 1.34 0 0 0-.007.034l-.018.087v.002c-.013.07-.031.159-.052.254a4.92 4.92 0 0 1-.099.382.671.671 0 0 1-.012.033l-.004.01a.75.75 0 0 1-.66.424H5.48a.983.983 0 0 1-.155-.031 3.398 3.398 0 0 1-.36-.12l-.226-.095c-.482-.206-1.233-.646-1.978-1.16-.746-.516-1.436-1.07-1.814-1.491L.94 5.794l-.008-.008-.001-.001-.007-.007L.9 5.752a5.486 5.486 0 0 1-.084-.09 2.22 2.22 0 0 1-.164-.195l-.006-.008L.64 5.45a.749.749 0 0 1-.14-.446c0-.185.053-.348.144-.478l.074-.081.039-.044c.058-.065.125-.138.188-.202Z" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="text-orange-400 mx-1.5"> برند آیفون</span>
+                     <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
+                           <path stroke="#222F5D"
+                              d="m.945 4.2.006-.006.006-.007c.369-.406 1.067-.973 1.831-1.502.763-.53 1.537-.984 2.042-1.187l.01-.004c.067-.029.2-.079.341-.123a1.72 1.72 0 0 1 .3-.071c.13.002.253.031.375.092a.812.812 0 0 1 .33.377c.02.056.057.198.093.363a11.189 11.189 0 0 1 .054.253l.006.034c.1.558.161 1.502.161 2.575 0 1-.057 1.899-.14 2.48a1.34 1.34 0 0 0-.007.034l-.018.087v.002c-.013.07-.031.159-.052.254a4.92 4.92 0 0 1-.099.382.671.671 0 0 1-.012.033l-.004.01a.75.75 0 0 1-.66.424H5.48a.983.983 0 0 1-.155-.031 3.398 3.398 0 0 1-.36-.12l-.226-.095c-.482-.206-1.233-.646-1.978-1.16-.746-.516-1.436-1.07-1.814-1.491L.94 5.794l-.008-.008-.001-.001-.007-.007L.9 5.752a5.486 5.486 0 0 1-.084-.09 2.22 2.22 0 0 1-.164-.195l-.006-.008L.64 5.45a.749.749 0 0 1-.14-.446c0-.185.053-.348.144-.478l.074-.081.039-.044c.058-.065.125-.138.188-.202Z" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="text-slate-700 mx-1">آیفون <span class="font-iransans">13</span> </span>
+                  </div>
+               </div>
+            </div>
+            <!--* Main content * -->
+            <div class="grid col-span-12 grid-rows-[330px]  xs:grid-rows-[400px] 
+                        md:col-span-11 md:grid-rows-[170px_170px] auto-rows-auto md:bg-stone-50 md:rounded md:p-3 ">
+               <!-- images Gallary -->
+               <div class="md:col-span-3 ">
+                  <img src="/assets/imgs/Single Product/pro13.png" alt="" class="mx-auto p-4 xxs:p-6 md:p-2 lg:p-0 ">
+                  <!-- gallary -->
+                  <div class="hidden md:flex gap-x-1 pl-4 py-3 ">
+                     <div class="flex-1 border border-slate-400 rounded-md p-1">
+                        <img src="/assets/imgs/Single Product/Gallery - 2.png" alt="">
+                     </div>
+                     <div class="flex-1 border border-slate-400 rounded-md p-1">
+                        <img src="/assets/imgs/Single Product/Gallery - 4.png" alt="">
+                     </div>
+                     <div class="flex-1 border border-slate-400 rounded-md p-1">
+                        <img src="/assets/imgs/Single Product/Gallery - 2.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <!-- title && colors  -->
+               <div class="md:col-span-4 py-2 mr-4 ml-3">
+                  <div class=" md:border-b md:border-b-slate-200 pb-4 ">
+                     <div class="hidden md:block relative">
+                        <div class=" flex items-center text-orange-400  ">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-5 ml-1" fill="none">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="1.125"
+                                 d="M13.5 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5c0-3 .75-3.75 3.75-3.75h4.5c3 0 3.75.75 3.75 3.75ZM9 3.625H6" />
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="1.125"
+                                 d="M7.5 13.825a1.163 1.163 0 1 0 0-2.325 1.163 1.163 0 0 0 0 2.325Z" />
+                           </svg>
+                           <span
+                              class="inline-block w-4 h-4 rounded-full bg-orange-400 opacity-30 absolute -top-1 -right-1"></span>
+                           <span class="md:text-xs lg:text-base  select-none ml-2">
+                              تلفن همراه
+                           </span>
+                           <span class="md:text-xs lg:text-base  select-none">
+                              اپل
+                           </span>
+                        </div>
+                     </div>
+                     <div class="text-center md:text-right mt-8 md:mt-2">
+                        <div class="text-base md:text-sm lg:text-base text-slate-800 font-shabnamBold">
+                           گوشی آیفون <span class="font-iransans">13</span> -
+                           <span class="font-iransans">128</span>
+                           گیگابایت
+                        </div>
+                        <span class="text-slate-800 opacity-60 text-sm md:text-xs mt-5"> Apple Iphone 13 128
+                           GB</span>
+                     </div>
+                  </div>
+
+                  <div class="flex justify-between items-center  w-2/3 md:w-full mt-8 md:mt-6 mx-auto md:mx-0 ">
+                     <span class="text-slate-800 text-sm md:text-xs font-medium lg:text-base xl:text-lg">
+                        انتخاب رنگ:
+                     </span>
+                     <div x-data="{color:'white'}" class="flex items-center relative ">
+                        <div @click="color = 'white'"
+                           :class="color === 'white' ? 'ring-1 ring-gray-300 border-white  bg-slate-300 xxs:border-2 ' : ''"
+                           class="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full border border-gray-300 bg-slate-50 absolute left-0  xxs:left-0 cursor-pointer flex justify-center">
+                           <svg x-show="color === 'white'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              class="w-4 h-4 xxs:w-5 xxs:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 stroke-gray-400 ">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                           </svg>
+
+                        </div>
+                        <div @click="color = 'orange'"
+                           :class="color === 'orange' ? 'ring-1 ring-orange-300 border-2' : ''"
+                           class="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full border border-stone-100 bg-orange-300 absolute left-[0.9rem] xxs:left-[1.2rem] ursor-pointer flex justify-center">
+                           <svg x-show="color === 'orange'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              class="w-4 h-4 xxs:w-5 xxs:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 stroke-white mr-[2px]">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                           </svg>
+                        </div>
+                        <div @click="color = 'indigo'"
+                           :class="color === 'indigo' ? 'ring-1 ring-indigo-600 border-2' : ''"
+                           class="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full border border-stone-100 bg-indigo-600 absolute left-[1.7rem] xxs:left-[2.3rem] cursor-pointer flex justify-center">
+                           <svg x-show="color === 'indigo'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              class="w-4 h-4 xxs:w-5 xxs:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 stroke-white mr-[2px]">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                           </svg>
+                        </div>
+                        <div @click="color = 'yellow'"
+                           :class="color === 'yellow' ? 'ring-1 ring-yellow-400 border-2' : ''"
+                           class="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full border border-stone-100 bg-yellow-400 absolute left-[2.5rem]  xxs:left-[3.4rem] cursor-pointer flex justify-center">
+                           <svg x-show="color === 'yellow'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              class="w-4 h-4 xxs:w-5 xxs:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 stroke-white mr-[2px]">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                           </svg>
+                        </div>
+                        <div @click="color = 'red'" :class="color === 'red' ? 'ring-1 ring-orange-400 border-2' : ''"
+                           class="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full border border-stone-100 bg-orange-400 absolute left-[3.2rem]  xxs:left-[4.5rem]  cursor-pointer flex justify-center">
+                           <svg x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                              class="w-4 h-4 xxs:w-5 xxs:h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 stroke-white mr-[2px]">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- seller details -->
+               <div
+                  class="md:col-span-2 md:bg-stone-100 md:h-[200px] lg:h-[220px] md:rounded-sm md:pt-1.5 md:pb-5 md:px-2 ">
+                  <ul class="inline-block mr-12 xxs:mr-0 xxs:px-4 md:px-0 xxs:flex xxs:flex-row xxs:items-center md:items-start
+                         xxs:flex-wrap xxs:gap-1 md:gap-0 mt-6 md:mt-0  ">
+                     <li class="flex items-center  xxs:flex-auto   px-1 py-2 md:items-start">
+                        <div class="relative ml-2">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
+                                 d="M1.756 6.545v2.62c0 2.618 1.05 3.668 3.669 3.668h3.144c2.62 0 3.67-1.05 3.67-3.669v-2.62" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
+                                 d="M7 7c1.068 0 1.855-.87 1.75-1.937l-.385-3.897H5.641l-.39 3.897C5.144 6.13 5.932 6.999 7 6.999Z" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".875"
+                                 d="M10.681 7c1.178 0 2.042-.957 1.925-2.13l-.163-1.604c-.21-1.517-.794-2.1-2.322-2.1h-1.78l.41 4.09c.098.962.967 1.743 1.93 1.743ZM3.29 7c.963 0 1.832-.782 1.925-1.745l.128-1.289.28-2.8H3.844c-1.528 0-2.111.583-2.321 2.1L1.365 4.87C1.248 6.043 2.112 7 3.29 7ZM7 9.916c-.974 0-1.458.484-1.458 1.458v1.459h2.916v-1.459c0-.974-.484-1.458-1.458-1.458Z" />
+                           </svg>
+                           <span
+                              class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute -top-2 -right-1"></span>
+                        </div>
+                        <div class="text-xs sm:text-10px  lg:text-13px">
+                           <span class="font-medium ">فروشنده :</span>
+                           <span class="font-shabnamLight text-slate-500">دیجی تایز</span>
+                        </div>
+                     </li>
+                     <li class="flex items-center  xxs:flex-auto  px-1 py-2 md:items-start">
+                        <div class="relative ml-2">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none">
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.063"
+                                 d="M7.43 1.58 3.897 2.91c-.815.305-1.48 1.268-1.48 2.132v5.263c0 .836.552 1.934 1.225 2.437l3.046 2.274c.999.75 2.642.75 3.64 0l3.046-2.274c.673-.503 1.226-1.6 1.226-2.437V5.043c0-.87-.666-1.834-1.48-2.139L9.583 1.58c-.602-.22-1.566-.22-2.153 0Z" />
+                           </svg>
+                           <span
+                              class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute -top-2 -right-1"></span>
+                        </div>
+                        <div class="text-xs sm:text-10px  lg:text-13px">
+                           <span class="font-medium">گارانتی :</span>
+                           <span class="font-shabnamLight text-slate-500">
+                              <span class="font-iransans">18</span> <span class="">ماه زرین خدمت</span>
+                           </span>
+                        </div>
+                     </li>
+                     <li
+                        class="flex items-center xxs:flex-auto  xxs:justify-center md:justify-start px-1 py-2 md:items-start ">
+                        <div class="relative ml-2">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
+                                 d="M10 1.333V8c0 .733-.6 1.333-1.333 1.333H1.333V5.08a2.6 2.6 0 0 0 2.06.92 2.562 2.562 0 0 0 1.734-.707c.206-.173.38-.393.513-.633.24-.407.373-.887.36-1.387a2.655 2.655 0 0 0-.907-1.94H10Z" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
+                                 d="M14.667 9.333v2c0 1.107-.894 2-2 2H12C12 12.6 11.4 12 10.667 12c-.734 0-1.334.6-1.334 1.333H6.667c0-.733-.6-1.333-1.334-1.333C4.6 12 4 12.6 4 13.333h-.667c-1.106 0-2-.893-2-2v-2h7.334C9.4 9.333 10 8.733 10 8V3.333h1.227c.48 0 .92.26 1.16.673L13.527 6h-.86C12.3 6 12 6.3 12 6.666v2c0 .367.3.667.667.667h2Z" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.125"
+                                 d="M5.333 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM10.667 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM14.667 8v1.333h-2A.669.669 0 0 1 12 8.667v-2c0-.367.3-.667.667-.667h.86l1.14 2Z" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-miterlimit="10" stroke-width="1.125"
+                                 d="M6 3.333c0 .8-.353 1.513-.907 2A2.666 2.666 0 1 1 3.333.666 2.666 2.666 0 0 1 6 3.333Z" />
+                              <path stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-miterlimit="10" stroke-width="1.125" d="M3.5 2.499v1l-.833.5" />
+                           </svg>
+                           <span
+                              class="inline-block w-5 h-5 rounded-full bg-gray-300 opacity-30 absolute -top-2 -right-1"></span>
+                        </div>
+                        <div class="text-xs sm:text-10px  lg:text-13px">
+                           <span class="font-medium">ارسال توسط :</span>
+                           <span class="font-shabnamLight text-slate-500">انبار تهران </span>
+                        </div>
+                     </li>
+                  </ul>
+                  <div class="hidden md:block">
+                     <div class="flex justify-center items-center text-orange-500 mt-5 lg:mt-8 ">
+                        <span class="font-iransans ml-1 md:text-sm lg:text-base">2,288,000</span>
+                        <span class="text-xs">تومان</span>
+                     </div>
+                     <div class=" mx-1">
+                        <button class="w-full bg-orange-500  hover:bg-orange-600 rounded-md mt-3  cursor-pointer">
+                           <a href="#" class="block py-2  md:text-xs  text-stone-50 ">
+                              اضافه به سبد خرید
+                           </a>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <!-- properties -->
+               <div
+                  class="md:col-start-4 md:col-end-8 md:mt-0  bg-stone-50 px-7 py-4 rounded-lg mt-7 md:bg-transparent md:py-0 ">
+                  <h3 class="text-sm mb-1">ویژگی های کالا :</h3>
+                  <ul class="list-disc list-outside marker:text-orange-500">
+                     <li class="">
+                        <h4 class="text-xs lg:text-[13px] text-slate-500 ">حافظه داخلی : </h4>
+                        <span class="text-sm  ">
+                           128 گیگابایت
+                        </span>
+                     </li>
+                     <li class="">
+                        <h4 class="text-xs lg:text-[13px] text-slate-500">بازه اندازه صفحه نمایش : </h4>
+                        <span class="text-sm ">0.6 اینچ و بزرگتر</span>
+                     </li>
+                     <li class="">
+                        <h4 class="text-xs lg:text-[13px] text-slate-500">شبکه های ارتباطی : </h4>
+                        <span class="text-sm">2G 3G 4G 5G</span>
+                     </li>
+                  </ul>
+               </div>
+               <!-- product Review -->
+               <div x-data="{more:false}" class="md:col-span-9 md:row-start-3  p-4 mt-5 mb-5 bg-stone-50 rounded-lg">
+                  <h3 class="text-slate-800 font-bold mb-4">
+                     نقد و بررسی این محصول
+                  </h3>
+                  <p class="text-xs text-slate-700 font-shabnamLight text-justify "
+                     :class="more === true ? '' : 'line-clamp-6'">
+                     وشی موبایل «iPhone 13» پرچم‌دار جدید شرکت اپل است که با چند ویژگی جدید و دوربین دوگانه روانه بازار
+                     شده است. نمایشگر آیفون 13 به پنل Super Retina مجهز ‌شده است تا تصاویر بسیار مطلوبی را به کاربر عرضه
+                     کند. این نمایشگر رزولوشن بسیار بالایی دارد؛ به‌طوری‌که در اندازه­‌ی 6.1 اینچی‌اش، حدود 460 پیکسل را
+                     در هر اینچ جا داده است. امکان شارژ بی‌‌سیم باتری در این گوشی وجود دارد. روکش سرامیکی صفحه‌نمایش این
+                     گوشی می‌تواند انقلابی در محافظت به‌پا کند. این گوشی ضدآب و ضد گردوخاک است. بدنه­ زیبا iPhone 13 در
+                     مقابل خط‌‌وخش مقاومت زیادی دارد؛ پس خیالتان از این بابت که آب و گردوغبار به‌‌راحتی روی آیفون 13
+                     تأثیر نمی‌‌گذارد، راحت باشد. تشخیص چهره با استفاده از دوربین جلو دیگر ویژگی است که در آیفون جدید
+                     اپل به کار گرفته شده است. ازنظر سخت‌‌افزاری هم این گوشی از تراشه­‌ی جدید A15 بهره می‌برد که دارای
+                     15 میلیارد ترانزیستور است که دارای کنترل گرمای مطلوبی بوده که تا بتواند علاوه بر کارهای معمول، از
+                     قابلیت‌های جدید واقعیت مجازی که اپل این روزها روی آن تمرکز خاصی دارد، پشتیبانی کند. پردازنده دارای
+                     ماژولار جدیدی است که مصرف باتری را بسیار پایین‌تر آورده است و شما دارای حفظ باتری بالاتری هستید.
+                     اپل در این سری از گوشی‌های iPhone خود پردازنده گرافیکی‌ای را قرار داده که از سری 12 گوشی‌های خود 30
+                     درصد سریع‌تر است. یکی از ویژگی‌هایی که در iPhone 13 شاهد هستیم سیستم فیلمبرداری ProRes سینمایی آن
+                     است که می تواند انقلابی در فیلمبرداری گوشی‌های موبایل به‌راه انداخته باشد. گوشی‌های نات اکتیو با
+                     قرار گرفتن سیم‌کارت‌های داخلی اکتیو می‌شوند و برخلاف مدل اکتیو پلمپ کالا باز نشده است. گوشی‌های
+                     اکتیو برند اپل هم به این شکل هستند که به دلیل محدودیت‌های برخی از محصولات اپل برای کشور ایران، در
+                     کشور‌های همسایه به‌صورت رسمی با یک بار قرار گرفتن سیم‌کارت، اکتیو شده و پلمپ می‌شوند و باید بدانید
+                     که این پروسه هیچ مشکلی در راستای گارانتی کالا به‌همراه ندارد. پارت‌نامبر‌های اروپا و ژاپن و امارات
+                     تک سیم‌کارت هستند و پارت‌نامبر‌های مربوط به امارات هم از فیس تایم پشتیبانی نمی‌کنند. پارت‌نامبر JA
+                     (ژاپن) هم حتی در حالت سایلنت صدای شاتر عکس قطع نمی‌شود.
+                  </p>
+                  <div class="flex flex-row-reverse mt-3">
+                     <button x-on:click="more = !more" x-text="more ===false ? 'بیشتر': 'بستن'"
+                        class="text-orange-400 text-xs font-shabnam cursor-pointer">
+
+                     </button>
+                  </div>
+               </div>
+               <!-- more data about the product in mobile  -->
+               <div class="md:hidden p-4 mb-5 bg-stone-50 rounded-xl ">
+                  <div x-data="{tab:2 , activeClass:'bg-stone-50 drop-shadow-md text-slate-800 opacity-100'}">
+                     <div
+                        class="flex  w-[90%] justify-evenly items-center bg-stone-100 rounded-3xl text-xs text-slate-800/50 py-1 mx-auto">
+                        <div @click="tab = 1" :class="tab === 1 ? activeClass : ''" class="rounded-3xl py-2 px-5">دوربین
+                        </div>
+                        <div @click="tab = 2" :class="tab === 2 ? activeClass : ''" class="rounded-3xl py-2 px-5">طراحی
+                        </div>
+                        <div @click="tab = 3" :class="tab === 3 ? activeClass : ''" class="rounded-3xl py-2 px-5">باتری
+                        </div>
+                     </div>
+                     <div x-show="tab === 1">
+                        <h2 class="my-5">دوربین</h2>
+                        <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                           دوربین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                           گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                           فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                           زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم
+                           افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+                           فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و
+                           شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات
+                           پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+                           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                           چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                           مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                           درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                           بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                           کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                           به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                           موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                     </div>
+                     <div x-show="tab === 2">
+                        <h2 class="my-5">طراحی</h2>
+                        <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                           است،طراحی
+                           چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                           تکنولوژی
+                           مورد
+                           نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                           گذشته
+                           حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                           طراحان
+                           رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                           امید
+                           داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                           شامل
+                           حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                           قرار
+                           گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                           است،
+                           چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                           تکنولوژی
+                           مورد
+                           نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                           گذشته
+                           حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                           طراحان
+                           رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                           امید
+                           داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                           شامل
+                           حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                           قرار
+                           گیرد.
+                        </p>
+                     </div>
+                     <div x-show="tab === 3">
+                        <h2 class="my-5">باتری</h2>
+                        <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                           باتری لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                           گرافیک
+                           است،طراحی
+                           چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                           تکنولوژی
+                           مورد
+                           نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                           گذشته
+                           حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                           طراحان
+                           رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                           امید
+                           داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                           شامل
+                           حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                           قرار
+                           گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                           است،
+                           چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                           تکنولوژی
+                           مورد
+                           نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                           گذشته
+                           حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                           طراحان
+                           رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                           امید
+                           داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                           شامل
+                           حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                           قرار
+                           گیرد.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- more data about the product in desktop -->
+               <div class="hidden md:block md:col-span-9 md:row-start-4 p-4  bg-stone-50 rounded-xl">
+                  <div>
+                     <h2 id="1" class="my-5">طراحی</h2>
+                     <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                        است،طراحی
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی
+                        مورد
+                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته
+                        حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                        طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                        امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                        شامل
+                        حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                        قرار
+                        گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                        است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی
+                        مورد
+                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته
+                        حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                        طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                        امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                        شامل
+                        حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                        قرار
+                        گیرد.
+                     </p>
+                     <img src="/assets/imgs/Single Product/Middle.png" class="mx-auto my-2 p-10 lg:p-16" alt="">
+                  </div>
+                  <div>
+                     <h2 id="2" class="my-5">دوربین</h2>
+                     <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                        دوربین لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                        فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای
+                        زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم
+                        افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و
+                        شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات
+                        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
+                        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
+                        درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+                        بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                        کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ
+                        به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                        موجود طراحی اساسا مورد استفاده قرار گیرد.
+                     </p>
+                  </div>
+                  <div>
+                     <h2 id="3" class="my-5">باتری</h2>
+                     <p class="text-xs text-slate-700 font-shabnamLight text-justify ">
+                        باتری لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                        گرافیک
+                        است،طراحی
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی
+                        مورد
+                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته
+                        حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                        طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                        امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                        شامل
+                        حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                        قرار
+                        گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                        است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                        تکنولوژی
+                        مورد
+                        نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                        گذشته
+                        حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                        طراحان
+                        رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                        امید
+                        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                        شامل
+                        حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+                        قرار
+                        گیرد.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- price navbar-fixed in mobile -->
+      <div class="col-span-12 sticky bottom-0 left-0 right-0 md:hidden z-20 w-full mt-10">
+         <div class="flex justify-between items-center py-2 px-3 drop-shadow-2xl  bg-slate-50">
+            <button class="flex-[55%] xxs:flex-[45%] bg-orange-400  hover:bg-orange-500 rounded-md  cursor-pointer">
+               <a href="#" class="block py-2  md:text-xs  text-stone-50 ">
+                  اضافه به سبد خرید
+               </a>
+            </button>
+            <div
+               class="flex-auto flex flex-col items-end  xxs:flex-row xxs:items-center xxs:justify-end text-slate-800 ">
+               <span class="font-iransans ml-1 md:text-sm lg:text-base">2,288,000</span>
+               <span class="text-xs">تومان</span>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <div class="hidden md:flex bg-stone-50 py-6 px-6 mt-10 select-none">
+         <div class="flex-[70%] ">
+            <!-- icon in desktop -->
+            <div class="mb-3 flex items-center">
+               <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="99" height="26" fill="none">
+                     <path fill="#222F5D"
+                        d="M8.744 1.41V5.42H4.732V1.41h4.012Zm1.941 11.569c.173 0 .259.086.259.259v4.503c0 .173-.086.259-.259.259H9.65c-.276 0-.475-.009-.595-.026-.087 1.208-.337 2.235-.751 3.08-.414.863-1.078 1.657-1.993 2.381-.897.725-2.157 1.484-3.779 2.278L.746 21.727c1.208-.725 2.054-1.311 2.537-1.76.483-.449.776-.889.88-1.32.12-.431.181-1.13.181-2.096V7.49h4.762v4.918c0 .173.044.311.13.414a.56.56 0 0 0 .414.156h1.035Zm8.672-.233a5.21 5.21 0 0 1-.699 2.64A5.43 5.43 0 0 1 16.77 17.3a5.12 5.12 0 0 1-2.64.699h-3.442c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h3.39a.497.497 0 0 0 .363-.155.527.527 0 0 0 .155-.388V6.767h4.762v5.979Zm.052 7.325v4.011h-8.024v-4.011h8.024ZM26.094 18a5.119 5.119 0 0 1-2.64-.699 5.43 5.43 0 0 1-1.89-1.915 5.21 5.21 0 0 1-.698-2.64V.322h4.762v12.113c0 .173.043.31.13.414.103.087.232.13.388.13h1.578c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-1.63ZM35.798.685v4.011h-8.024V.685h8.024Zm-4.763 6.082h4.763v5.979a5.21 5.21 0 0 1-.7 2.64A5.43 5.43 0 0 1 33.21 17.3a5.119 5.119 0 0 1-2.64.699h-2.846c-.173 0-.26-.086-.26-.259v-4.503c0-.173.087-.26.26-.26h2.795a.496.496 0 0 0 .362-.155.527.527 0 0 0 .155-.388V6.767Z" />
+                     <path fill="#FF755C"
+                        d="M56.737 12.979c.173 0 .26.086.26.259v4.503c0 .173-.087.259-.26.259h-.724c.034.31.051.544.051.699a5.567 5.567 0 0 1-.776 2.873 5.615 5.615 0 0 1-2.096 2.07 5.614 5.614 0 0 1-2.9.777h-6.108a6.878 6.878 0 0 1-3.545-.958 7.159 7.159 0 0 1-2.589-2.588 6.878 6.878 0 0 1-.957-3.546v-6.833h4.762v6.574c0 .639.224 1.182.673 1.63.466.467 1.018.7 1.656.7h6.186c.207 0 .38-.07.518-.207a.672.672 0 0 0 .207-.492.672.672 0 0 0-.207-.492.702.702 0 0 0-.518-.207h-5.668v-5.021h12.035ZM56.74 18c-.173 0-.259-.086-.259-.259v-4.503c0-.173.086-.26.259-.26h5.798c1.173 0 2.174-.361 3.002-1.086l2.045-1.812-2.977-1.45c-.241-.103-.431-.155-.57-.155-.31 0-.62.138-.93.414l-2.693 2.977-3.313-2.899 2.718-3.313c.552-.656 1.2-1.13 1.941-1.423a5.725 5.725 0 0 1 2.226-.466c.863 0 1.682.207 2.459.62l5.539 2.59a.597.597 0 0 0 .207.05h3.339v4.66h-3.313v.724c0 .173.043.311.13.414a.56.56 0 0 0 .413.156h3.236c.172 0 .258.086.258.259v4.503c0 .173-.086.259-.258.259H72.76c-1.018 0-1.855-.242-2.51-.725-.639-.5-1.165-1.225-1.58-2.174l-.517.518a9.264 9.264 0 0 1-2.925 1.786A9.664 9.664 0 0 1 61.89 18h-5.151Zm3.21 2.07h4.011v4.012h-4.012v-4.011Zm24.72-7.324a5.21 5.21 0 0 1-.698 2.64 5.43 5.43 0 0 1-1.89 1.915 5.12 5.12 0 0 1-2.64.699H76c-.172 0-.259-.086-.259-.259v-4.503c0-.173.087-.26.26-.26h3.39a.496.496 0 0 0 .362-.155.526.526 0 0 0 .155-.388V6.767h4.763v5.979Zm.053 7.325v4.011h-8.024v-4.011h8.024Zm8.315-7.092c.449 0 .673-.181.673-.544a.418.418 0 0 0-.155-.336c-.104-.104-.346-.285-.725-.544l-5.824-4.011 2.718-3.935 6.6 4.582c.707.552 1.242 1.138 1.605 1.76.362.62.543 1.397.543 2.329 0 1.087-.267 2.07-.802 2.95a5.62 5.62 0 0 1-2.122 2.045 6.073 6.073 0 0 1-2.925.725h-6.445v-5.021h6.859Z" />
+                  </svg>
+               </span>
+               <span class="w-10 h-1 bg-orange-400 inline-block rounded mr-1"></span>
+            </div>
+
+            <div class="md:flex items-center gap-x-10">
+               <!-- about -->
+               <div class="flex-[70%]">
+                  <p class="text-slate-700 text-sm text-justify leading-8 ">
+                     یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب
+                     را
+                     در
+                     مدت
+                     زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه
+                     اینترنتی
+                     دیجی
+                     تایز سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود را داشته باشد.
+                  </p>
+               </div>
+               <!-- quick access -->
+               <div class="flex-[18%] h-full">
+                  <ul class=" ">
+                     <h4 class="md:text-xs lg:text-base text-slate-600  mb-2 px-1">
+                        محصولات
+                     </h4>
+                     <li class="relative  cursor-pointer ">
+                        <a href="#!" class="block  text-slate-800 pr-0 hover:pr-[2px] py-[2px]  mb-1 ">
+                           <span class="md:text-xs lg:text-13px   select-none">
+                              تلفن همراه
+                           </span>
+                        </a>
+                     </li>
+                     <li class="relative  cursor-pointer ">
+                        <a href="#!" class="block  text-slate-800 pr-0 hover:pr-[2px] py-[2px]  mb-1 ">
+                           <span class="md:text-xs lg:text-13px   select-none">
+                              لپ تاپ
+                           </span>
+                        </a>
+                     </li>
+                     <li class="relative  cursor-pointer ">
+                        <a href="#!" class=" block  text-slate-800  pr-0 hover:pr-[2px] py-[2px]  mb-1">
+                           <span class="md:text-xs lg:text-13px   select-none">
+                              ساعت هوشمند
+                           </span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+         <div class="flex-[27%] ">
+            <!-- map -->
+            <div class=" flex flex-col gap-y-3 items-end">
+               <div class="rounded-md overflow-hidden">
+                  <img src="/assets/imgs/Footer.jpg" class="w-64 h-36 " alt="">
+               </div>
+               <!-- address -->
+               <div>
+                  <div class="flex justify-end items-center">
+                     <div class="text-xs text-slate-600"> 021-123456 </div>
+                     <div class="text-orange-500 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                           stroke="currentColor" class="w-4 h-4">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                     </div>
+                  </div>
+                  <div class="flex justify-end items-center">
+                     <div class="text-xs text-slate-600">info@digitize.com</div>
+                     <div class="text-orange-500 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                           stroke="currentColor" class="w-4 h-4">
+                           <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+
+                     </div>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>
