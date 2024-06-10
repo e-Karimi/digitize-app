@@ -1,8 +1,8 @@
-## <i>Digitize-app</i>
+# <i>Digitize-app</i>
 
 ### This application contains static, and responsive pages (single product and cart) developed by HTML and Tailwind CSS
 
-###  <i>picturs</i>
+##  <i>picturs</i>
 
 1-Desktop & Tablet size (singleProduct)
 
