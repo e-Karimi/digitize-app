@@ -1,6 +1,6 @@
 # <i>Digitize-app</i>
 
-### This application contains responsive pages(single product  and cart) developed by  html and Tailwind CSS and Alpine.js. 
+### This application contains responsive pages(single product  and cart) developed by  HTML and Tailwind CSS and Alpine.js. 
 
 ##  <i>picturs</i>
 
