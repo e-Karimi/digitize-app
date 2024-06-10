@@ -1,6 +1,8 @@
-## Using Tailwind CSS framework with Html
+##<i>Digitize-app</i>
 
-# <i>picturs</i>
+###This application contains static, and responsive pages (single product and cart) developed by HTML and Tailwind CSS
+
+###  <i>picturs</i>
 
 1-Desktop & Tablet size (singleProduct)
 
